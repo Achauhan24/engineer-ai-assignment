@@ -1,0 +1,125 @@
+body {
+    padding-top: 60px;
+}
+
+section {
+    overflow: auto;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.center {
+    text-align: center;
+}
+
+.center h1 {
+    margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+}
+
+h1 {
+    font-size: 3em;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.2em;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: normal;
+    color: #777;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+    float: left;
+    margin-right: 10px;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-top: 9px;
+    font-weight: bold;
+}
+
+#logo:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.form{
+    display: inline;
+}
+
+.table td{
+    padding-bottom:1px;
+    padding-top:1px;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination span.page.current, .pagination a{
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+}
+
+.pagination span.page.current {
+    background-color: #3abc9c;
+    color: white;
+    border: 1px solid #4CAF50;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+button.btn.btn-info,span.badge.badge-pill.badge-info{
+    background-color: #3abc9c;
+    border-color: #3abc9c;
+}
+.table-bordered thead tr th {
+    border-bottom-width: 2px;
+    text-align: center;
+}
+.dropdown {
+    margin-top: 15px;
+    margin-left: 3px;
+}
+.dropdown a.nostyle:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+.dropdown a.nostyle:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+.caret {
+    cursor: pointer;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+}

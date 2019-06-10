@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  # username: postgres
+  # password:
+  pool: 5
+
+development:
+  <<: *default
+  database: rails_assignment_development
+
+test:
+  <<: *default
+  database: rails_assignment_test
+
+staging:
+  <<: *default
+  database: rails_assignment_staging
+
+production:
+  <<: *default
+  database: rails_assignment_production

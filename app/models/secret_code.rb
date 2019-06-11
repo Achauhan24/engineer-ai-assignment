@@ -1,4 +1,6 @@
 class SecretCode < ApplicationRecord
+  paginates_per 10
+  
   belongs_to :user, inverse_of: :secret_code, required: false
   before_create :set_secret_code
 

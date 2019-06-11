@@ -15,14 +15,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
     if sign_up_params[:secret_code].blank?
       flash[:notice] = "Please enter a valid secret code"
       redirect_to new_user_registration_path
-    elsif SecretCode.where.not(user_id: nil).pluck(:code).include? sign_up_params[:secret_code]
+    elsif !SecretCode.where(user_id: nil).pluck(:code).include? sign_up_params[:secret_code]
       flash[:notice] = "Please enter a valid secret code"
       redirect_to new_user_registration_path
     else
       resource.save
       yield resource if block_given?
       if resource.persisted?
-        resource.create_secret_code!(code: sign_up_params[:secret_code])
+        SecretCode.find_by(code: sign_up_params[:secret_code]).update!(user_id: resource.id)
         if resource.active_for_authentication?
           set_flash_message! :notice, :signed_up
           sign_up(resource_name, resource)
